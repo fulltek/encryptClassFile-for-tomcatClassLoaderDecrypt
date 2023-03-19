@@ -14,31 +14,13 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
  
-/**
- * 
- * Title: FileOperateHelper
- * Description: 文件读写帮助类
- * @author 陈家宝
- * @date   2019年3月12日 下午1:37:01
- *
- */
+
 public class FileOperateHelper {
 	
 	private static SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 	
 	private static final boolean HIDE_LOG = false;		// 隐藏调试输出
-	
-	/**
-	 * 
-	 * @title: read
-	 * @description: 读取文件内容
-	 * @author: 陈家宝
-	 * @version: V1.00
-	 * @date: 2019年3月13日 上午2:16:04
-	 * @param file
-	 * @return
-	 * @throws Exception
-	 */
+
 	public static byte[] read(File file) throws Exception {
 		BufferedInputStream bis = new BufferedInputStream(new FileInputStream(file));
 		byte[] buf = new byte[1024];
@@ -60,17 +42,6 @@ public class FileOperateHelper {
 		return result;
 	}
 	
-	/**
-	 * 
-	 * @title: read
-	 * @description: 读取流内容
-	 * @author: 陈家宝
-	 * @version: V1.00
-	 * @date: 2019年3月13日 上午2:17:07
-	 * @param in
-	 * @return
-	 * @throws IOException
-	 */
 	public static byte[] read(InputStream in) throws IOException {
 		BufferedInputStream bis = new BufferedInputStream(in);
 		byte[] buf = new byte[1024];
@@ -91,17 +62,7 @@ public class FileOperateHelper {
 		return result;
 	}
 	
-	/**
-	 * 
-	 * @title: write
-	 * @description: 将内容写入文件
-	 * @author: 陈家宝
-	 * @version: V1.00
-	 * @date: 2019年3月13日 上午2:19:19
-	 * @param content
-	 * @param file
-	 * @throws Exception
-	 */
+
 	public static void write(byte[] content, File file) throws Exception {
 		BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(file));
 		bos.write(content);
@@ -109,17 +70,6 @@ public class FileOperateHelper {
 		bos.close();
 	}
 	
-	/**
-	 * 
-	 * @title: log
-	 * @description: 做日志，不能断点调试太惨了
-	 * @author: 陈家宝
-	 * @version: V1.00
-	 * @date: 2019年3月12日 下午8:10:22
-	 * @param content 写入文件的内容
-	 * @param append 是否追加到文件末尾
-	 * @throws Exception
-	 */
 	public static void log(String content, boolean append) {
 		if (HIDE_LOG) {
 			return;
