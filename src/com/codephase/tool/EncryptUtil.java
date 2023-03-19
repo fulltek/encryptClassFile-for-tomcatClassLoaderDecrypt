@@ -18,21 +18,7 @@ import javax.crypto.spec.SecretKeySpec;
  */
  
 public class EncryptUtil {
-	
-//	private static String key = "0izxx2Vadhvlf5FOOgNauOev3htZRWSAymIYF7gt7hNqTBGnqdayPHBEcN4hmwbOcXz687W2lOajcwq8hwF8UmUzxkNio3hGHZOOSJsibclPn7ZXFQ0aDxAlIFFYDLlI";   
 
-	/*	public static void main(String[] args) throws Exception {
-        String content = "cipher.init(Cipher.ENCRYPT_MODE, new SecretKeySpec(kgen.generateKey().getEncoded(), \"AES\"));";  
-        System.out.println("加密前：" + content);  
-  
-        System.out.println("加密密钥和解密密钥：" + key);  
-
-        String encrypt = aesEncryptFromStringToBase64String(content);  
-        System.out.println("加密后：" + encrypt);  
-          
-        String decrypt = aesDecryptToStringByBase64String(encrypt);  
-        System.out.println("解密后：" + decrypt);  
-    }  */
 	
 	private static String marijuana=null;
       
